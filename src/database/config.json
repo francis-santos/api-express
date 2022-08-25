@@ -3,5 +3,5 @@
     "network": "LSMT/GRU/RECURRENT",
     "dataset_start": "YYYY-MM-DD",
     "dataset_end": "YYYY-MM-DD",
-    "time_frame": "30m/60m/120m",
+    "time_frame": "30m/60m/120m"
 }
