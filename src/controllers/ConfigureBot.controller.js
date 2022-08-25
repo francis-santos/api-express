@@ -1,9 +1,9 @@
 const catchAsync = require('../utils/catchAsync');
 
 const createConfig = catchAsync(async (req, res) => {
-    console.log("CreateConfig method")
+    res.send("aoba")
   });
 
-  module.exports = {
+module.exports = {
     createConfig
-  };
+};
