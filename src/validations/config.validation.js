@@ -1,12 +1,12 @@
 const Joi = require('joi');
 
-const createConfig = {
-    body: Joi.object().keys({
-      email: Joi.string().required().email(),
-      name: Joi.string().required(),
-      role: Joi.string().required().valid('user', 'admin'),
-    }),
-  };
+const createConfig = Joi.object({
+  type: Joi.string().required(),
+  dataset_start: Joi.string().required(),
+  dataset_end: Joi.string().required(),
+  token: Joi.string().required(),
+  inputs: Joi.array().items(Joi.string().valid("close", "volume", "otimismo")),
+});
 
 module.exports = {
   createConfig
