@@ -1,7 +1,24 @@
+INPUT
 {
     "type": "Normal/Advanced",
     "network": "LSMT/GRU/RECURRENT",
     "dataset_start": "YYYY-MM-DD",
     "dataset_end": "YYYY-MM-DD",
-    "time_frame": "30m/60m/120m",
+    "time_frame": "1/2..24",
+    "input_size": "1/2/3",
+    "inputs": ["close", "volume", "otimismo"],
+    "token": "KLV/USD"
+}
+
+Normal
+NETOWKR: LSMT
+TIME_FRAME: 24
+INPUt_SIZE: 1
+INPUTS: CLOSE
+
+OUTPUt
+{
+    "date": "YYYY-MM-DD",
+    "signal": "UP/DOWN",
+    "time_frame": "24"
 }

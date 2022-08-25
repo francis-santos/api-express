@@ -1,14 +1,13 @@
 const express = require('express');
+const { outputBotController } = require('../controllers');
 
 
 const router = express.Router();
 
-router
-  .route('/config')
-  .post({}, validate(userValidation.createUser), userController.createUser);
+// router
+//   .route('/config')
+//   .post({}, validate(userValidation.createUser), userController.createUser);
 
-router
-  .route('/output')
-  .get({}, validate(userValidation.getUsers), userController.getUsers)
+router.get('/output', outputBotController.getOutputBotJob);
 
 module.exports = router;
